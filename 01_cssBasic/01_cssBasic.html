@@ -3,25 +3,77 @@
 <html>
     <head>
         <!-- css的语句放在style中。css的使用方法有很多：类使用点定义、id使用#定义，这被称为类选择器和id选择器。
+             还有一种使用html自带标签的用法，称为标签选择器，比如这里的h1。
              css样式分为内联样式、内部样式、外部样式以及其他。当样式之间产生冲突时，优先级为这里所写的从左到右。
         -->
-        <style>
-            /*像这种直接使用元素名的用法是可行的。*/
-            /*在style中定义的样式称为内部样式。*/
+        <style>/*在style中定义的样式称为内部样式。*/
+            
+            /* 元素选择器例子： */
             h1 {
-                font-size: 20px;
+                font-size: 60px;
                 text-align: center;
                 color: yellow;
                 padding: 200px;
                 margin: 15px;
                 background-color: red;
             }
+            /* id选择器例子： */
+            #fromid {
+                text-align: left;
+                font-family: 'Times New Roman', Times, serif;
+                margin: 15px;
+                font-size: 40px;
+            }
+            /* 类选择器例子 */
+            .fromclass {
+                text-align: right;
+                font-size: 60px;
+                color: purple;
+            }
+
+            /* 包含选择器例子 */
+            .inc h2 {
+                color: grey;
+                font-size: 50px;
+            }
+
+            /* 子选择器例子 */
+            .father>h3 {
+                color: pink;
+                font-size: 60px;
+            }
+
+            /* 由于通用选择器会影响到全局，所以这里不展示，语法为 *{} 这样。 */
+            /* 还有个属性选择器，会影响的范围比较大，有很多浏览器也不支持，故不展示。 */
         </style>
     </head>
 
     <body>
         <h1>
-            这是头部语句
-        <h1/>
+            这是经过元素选择器处理的结果
+        </h1>
+
+        <!-- 因为这条h1同时被两个样式修饰，所以会取二者“并集”，
+            相同修饰同时出现的取后者，未出现过的修饰则直接应用。 -->
+        <h1 id="fromid">This is come from id</h1>
+
+        <!-- 类选择器例子 -->
+        <p class="fromclass">类选择器例子1</p>
+        <p class="fromclass">类选择器例子2</p>
+
+        <!-- 包含选择器例子 -->
+        <div class="inc">
+            这是包含选择器外层
+            <h2>这是包含选择器内层</h2>
+        </div>
+
+        <div class="father">
+            这是子选择器外部。
+            <h3>子选择器内部1（有效果）</h3>
+            <h3>子选择器内部2（有效果）</h3>
+            <div><h3>子选择器内部中的嵌套（无效果）</h3></div>
+            <h4>子选择器内部的另一种标签</h4>
+        </div>
+
     </body>
 </html>
