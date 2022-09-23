@@ -1,0 +1,18 @@
+<!-- 本节学习css的链接样式。因为比较简单所以放在html里。 -->
+
+<!-- 链接样式主要设置的是：标定一个链接访问过还是没访问过、鼠标是否指着它。它们之间的字体颜色、背景颜色都是可以不同的。 -->
+<html>
+    <head>
+        <style>
+            /* 链接样式对顺序有要求，所以记得按照这个顺序来就行。 */
+            a:link {color:#000000;background-color: #FFFFFF;}      /* 未访问链接*/
+            a:visited {color:#00FF00;background-color: #ffff01;}  /* 已访问链接 */
+            a:hover {color:#FF00FF;background-color: #3e30be;}  /* 鼠标移动到链接上 */
+            a:active {color:#0000FF;background-color: #df0a0a;}  /* 鼠标点击时 */
+        </style>
+    </head>
+
+    <body>
+        <a href="https://www.baidu.com">试试看</a>
+    </body>
+</html>
