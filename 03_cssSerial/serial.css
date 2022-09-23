@@ -1,0 +1,80 @@
+/* 这节学习一系列修饰方法 */
+
+/* 本节的修饰使用类+标签的方法展示，一些比较特殊的会用标签选择器。 */
+
+/* 首先是背景，背景有五个可选的语句：背景颜色、背景图片、是否重复、图像是否随页面滚动、左右上下位置 */
+body {
+    background-color: orange;
+    background-image: url('backpic.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+/* 
+    可以使用简略的方法重写body
+body{
+    background: orange url('backpic.jpg') no-repeat fixed top
+}
+*/
+
+
+
+/* 下面，平行地展示三种不同的结构，来说明每个语句的可选项 */
+/* 默认情况下：文本为黑色，对齐方式由浏览器决定，修饰为无 */
+.s1{
+    /* 文本颜色：既定的颜色 */
+    color: aqua;
+    /* 对齐方式：居中对齐 */
+    text-align: center;
+    /* 文本修饰：上划线 */
+    text-decoration: overline;
+    /* 文本转换：字母大写 */
+    text-transform: uppercase;
+    /* 字体大小 */
+    font-size: 50px;
+    /* 字体 */
+    font-family: 'Times New Roman', Times, serif;
+    /* 正字体 */
+    font-style: normal;
+    /* 首字母变体（小型大写字母） */
+    font-variant: small-caps;
+    /* 字母粗细 */
+    font-weight: 100;
+}
+.s2{
+    /* 文本颜色：RGB */
+    color: rgb(255, 255, 255);
+    /* 对齐方式：右对齐 */
+    text-align: right;
+    /* 文本修饰：删除线 */
+    text-decoration: line-through;
+    /* 文本转换：字母小写 */
+    text-transform: lowercase;
+    /* 字体大小 */
+    font-size: 50px;
+    /* 字体 */
+    font-family: Arial, Helvetica, sans-serif;
+    /* 右倾字体 */
+    font-style: italic;
+    /* 字母粗细 */
+    font-weight: 200;
+}
+.s3{
+    /* 文本颜色：十六进制 */
+    color: #66ccff;
+    /* 对齐方式：两端对齐 */
+    text-align: justify;
+    /* 文本修饰：下划线 */
+    text-decoration: underline;
+    /* 文本转换：所有单词首字母大写 */
+    text-transform: capitalize;
+    /* 字体大小 */
+    font-size: 50px;
+    /* 字体 */
+    font-family: 'Courier New', Courier, monospace;
+    /* 强制倾斜字体（不推荐），可以设置倾斜角度 */
+    font-style: oblique;
+    /* 字母粗细 */
+    font-weight: 300;
+}
