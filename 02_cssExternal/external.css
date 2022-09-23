@@ -1,1 +1,15 @@
 /* 这是一张外部样式表 */
+.topic {
+    color: yellow;
+    text-align: center;
+    font-size: 50px;
+    background-color: red;
+    padding: 200px;
+    margin: 15px;
+}
+
+.para {
+    color: red;
+    font-size: 20px;
+    margin: 15px;
+}
