@@ -1,0 +1,58 @@
+.menu {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* 列表修饰 */
+/* 无序列表(Unordered List, UL) */
+ul.operator {
+    /* 列表图像：空心圆点 */
+    list-style-type: circle;
+    font-size: 30px;
+}
+ul.desert {
+    /* 列表图像：实心正方形 */
+    list-style-type: square;
+    font-size: 30px;
+}
+
+ul.invited {
+    /* 列表图像：自定义 */
+    list-style-image: url('./listpic.png');
+    font-size: 30px;
+}
+/* 列表图像如果写none就是无列表图像。 */
+
+/* 有序列表(Ordered List, OL) */
+ol.course {
+    /* 列表标记：大写罗马数字 */
+    list-style-type: upper-roman;
+    font-size: 30px;
+}
+ol.advice {
+    /* 列表标记：小写英文字母 */
+    list-style-type: lower-alpha;
+    font-size: 30px;
+}
+
+
+/* 表格修饰 */
+table
+{
+    text-align: center;
+    /* 无项边框，默认是有的。 */
+    /* border-collapse: collapse; */
+    font-size: 50px;
+}
+table,th,td
+{
+	border:1px solid red;
+    
+}
+th {
+    height: 80px;
+    width: 200px;
+    background-color: red;
+    color: white;
+}
